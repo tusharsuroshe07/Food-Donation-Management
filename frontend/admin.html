@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Connect | Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        .stat-card { background: var(--primary-green); color: white; padding: 1.5rem; border-radius: 8px; text-align: center; }
+        .stat-card h1 { color: white; margin: 0; font-size: 2.5rem; }
+        .stat-card p { margin: 0; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f4f4f4; color: #333; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">🌿 Food Connect <span style="font-size: 1rem; color: #a5d6a7; margin-left: 10px;">Admin Panel</span></div>
+        <ul>
+            <li><span id="welcomeText" style="font-weight:400; margin-right:1rem;"></span></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container animate-fade">
+        <h2 class="mb-1">Platform Analytics</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h1 id="statUsers">0</h1>
+                <p>Total Users</p>
+            </div>
+            <div class="stat-card">
+                <h1 id="statDonations">0</h1>
+                <p>Food items listed</p>
+            </div>
+            <div class="stat-card" style="background: var(--accent-orange);">
+                <h1 id="statCompleted">0</h1>
+                <p>Donations Rescued</p>
+            </div>
+        </div>
+        <div class="grid" style="grid-template-columns: 1fr;">
+            <div class="card" style="overflow-x:auto;">
+                <h3>Global Donation Feed</h3>
+                <table>
+                    <thead><tr><th>Food</th><th>Donor</th><th>Assigned NGO</th><th>Status</th><th>Posted Date</th></tr></thead>
+                    <tbody id="adminDonationsList"><tr><td colspan="5">Loading donations...</td></tr></tbody>
+                </table>
+            </div>
+            <div class="card" style="margin-top: 2rem; overflow-x:auto;">
+                <h3>User Management</h3>
+                <table>
+                    <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th></tr></thead>
+                    <tbody id="adminUsersList"><tr><td colspan="4">Loading users...</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/admin.js"></script>
+</body>
+</html>

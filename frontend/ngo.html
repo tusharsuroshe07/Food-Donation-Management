@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Connect | NGO Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🌿 Food Connect</div>
+        <ul>
+            <li><span id="welcomeText" style="font-weight:400; margin-right:1rem;"></span></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container animate-fade">
+        <h2 class="mb-1">NGO Operations Dashboard</h2>
+        <div id="messageBox" class="hidden"></div>
+        <div style="margin-bottom: 2rem; display:flex; gap:10px;">
+            <button onclick="switchTab('pending')" id="btnPending" class="btn" style="background:#2E7D32;">Available Donations</button>
+            <button onclick="switchTab('accepted')" id="btnAccepted" class="btn" style="background:#ddd; color:#333;">My Accepted Tasks</button>
+        </div>
+        <div id="donationsList" class="grid">
+            <p class="text-muted">Loading available food...</p>
+        </div>
+    </div>
+    <script src="js/ngo.js"></script>
+</body>
+</html>

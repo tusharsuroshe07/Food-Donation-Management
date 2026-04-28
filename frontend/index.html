@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Connect | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🌿 Food Connect</div>
+        <ul>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="#" onclick="toggleMode()">Register</a></li>
+        </ul>
+    </nav>
+    <div class="container animate-fade">
+        <div class="form-wrapper">
+            <div id="messageBox" class="hidden"></div>
+            <h2 class="text-center" id="formTitle">Welcome Back!</h2>
+            <p class="text-center text-muted mb-1" id="formSubtitle">Login to your account.</p>
+            <form id="authForm">
+                <div class="form-group hidden" id="nameGroup">
+                    <label>Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="E.g. John Doe or Red Cross">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" class="form-control" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" class="form-control" required placeholder="********">
+                </div>
+                <div class="form-group hidden" id="roleGroup">
+                    <label>I am a...</label>
+                    <select id="role" class="form-control">
+                        <option value="donor">Food Donor</option>
+                        <option value="ngo">NGO</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-orange" style="width: 100%;" id="submitBtn">Login</button>
+            </form>
+            <p class="text-center mt-2">
+                <span id="toggleText">Don't have an account?</span> 
+                <a href="#" onclick="toggleMode()" id="toggleLink">Register here</a>
+            </p>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>
