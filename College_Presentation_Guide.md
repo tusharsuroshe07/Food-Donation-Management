@@ -1,4 +1,4 @@
-# 🎓 Food Donation Management System - College Presentation Guide
+# 🎓 Food Donation Management System -  Presentation Guide
 
 This document is designed to help you prepare for your college presentation. It breaks down the entire structure of the project file by file. It is written in a friendly, easy-to-explain format so you can use it as speaking notes!
 
